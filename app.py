@@ -6,7 +6,7 @@ import numpy as np
 import streamlit as st
 from sklearn.preprocessing import OneHotEncoder,LabelEncoder,StandardScaler
 
-model=tf.keras.models.load_model('model.h5')
+model=tf.keras.models.load_model('model.h5', compile=False)
 with open('label_encoder_gender.pkl','rb') as file:
     label_encoder_gender=pickle.load(file)
 
